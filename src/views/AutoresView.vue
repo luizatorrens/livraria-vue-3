@@ -1,5 +1,5 @@
 <script>
-import AutoresApi from "@/api/autores";
+import AutoresApi from '../api/autores';
 const autoresApi = new AutoresApi();
 export default {
   data() {
@@ -8,7 +8,7 @@ export default {
       autor: {},
     };
   },
-  async created() {
+  async mounted() {
     this.autores = await autoresApi.buscarTodosOsAutores();
   },
   methods: {
